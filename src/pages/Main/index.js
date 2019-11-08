@@ -15,12 +15,12 @@ function Main() {
     function noticeWelcome() {
       toast.info("Welcome to pull request list!", toast.POSITION.TOP_RIGHT);
     }
-    noticeWelcome();
+    noticeWelcome(); // welcome alert function when loading component
   }, []);
 
   const handleSetRepository = text => {
-    setRepository(text);
-    setValidRepo(true);
+    setRepository(text); // updating repository input state value
+    setValidRepo(true); // removing alert color from input border
   };
 
   const handleSubmit = async e => {
@@ -30,10 +30,10 @@ function Main() {
         "Please fill in the repository field",
         toast.POSITION.TOP_RIGHT
       );
-      setValidRepo(false);
+      setValidRepo(false); // adding alert color from input border
     } else {
       try {
-        const request = await api.get(`/repos/${repository}/pulls?state=open`);
+        const request = await api.get(`/repos/${repository}/pulls?state=open`); // request to github api receiving pull requests
         setPullRequest(request.data);
       } catch (error) {
         toast.error("Ops... Error in api request", toast.POSITION.TOP_RIGHT);
@@ -51,7 +51,7 @@ function Main() {
           placeholder="Repository"
           spellCheck="false"
           onChange={text => handleSetRepository(text.target.value)}
-          className={!validRepo ? "borderError" : ""}
+          className={!validRepo ? "border-validation" : ""}
         />
         <button>SEARCH</button>
       </form>
