@@ -33,11 +33,9 @@ function Main() {
       setValidRepo(false);
     } else {
       try {
-        const request = await api.get(`/repos/${repository}/pulls`);
+        const request = await api.get(`/repos/${repository}/pulls?state=open`);
         setPullRequest(request.data);
-        console.log(request.data);
       } catch (error) {
-        console.log(error);
         toast.error("Ops... Error in api request", toast.POSITION.TOP_RIGHT);
       }
     }
@@ -46,7 +44,7 @@ function Main() {
   return (
     <section id="main">
       <h1>Pull Requests List</h1>
-      <h2>Enter user and repository to view pull requests</h2>
+      <h2>Enter repository to view pull requests</h2>
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
