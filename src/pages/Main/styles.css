@@ -27,7 +27,7 @@
   border: #ffffff;
   margin: 0 0.4rem 0 0;
 }
-#main .form .borderError {
+#main .form .border-validation {
   border: 1px solid #cc0000;
 }
 #main .form button {
@@ -51,7 +51,7 @@
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 #main .list-items .item .header-item {
-  width: 60%;
+  width: 100%;
 }
 #main .list-items .item .header-item a {
   width: 100%;
@@ -62,12 +62,14 @@
   padding: 0 0.5rem;
 }
 #main .list-items .item .header-item span {
-  width: 100%;
+  width: auto;
+  color: #222;
   padding: 0.2rem 0.2rem;
   border-radius: 5px;
   font-size: 12px;
   margin: 0 3px;
   white-space: nowrap;
+  display: inline-block;
   font-family: "Quicksand-Bold";
 }
 #main .list-items .item p {
