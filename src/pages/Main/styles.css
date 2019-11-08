@@ -1,0 +1,78 @@
+#main {
+  margin: 6rem auto;
+  padding: 2rem 3rem 3rem;
+  max-width: 700px;
+  background: #b275f4;
+  color: #fff;
+  box-shadow: -20px -20px 0px 0px rgba(100, 100, 100, 0.2);
+}
+#main h1 {
+  font-family: "Quicksand-Bold";
+  font-size: 28px;
+}
+#main h2 {
+  font-family: "Quicksand-Light";
+  font-size: 16px;
+}
+#main .form {
+  display: flex;
+  flex-direction: row;
+}
+#main .form input {
+  width: 75%;
+  height: 50px;
+  font-family: "Quicksand";
+  font-size: 15px;
+  padding: 0 1rem;
+  border: #ffffff;
+  margin: 0 0.4rem 0 0;
+}
+#main .form .borderError {
+  border: 1px solid #cc0000;
+}
+#main .form button {
+  font-family: "Quicksand-Bold";
+  width: 20%;
+  padding: 0 3%;
+  color: #ffffff;
+  background: #b275f4;
+  border: 1px solid #ffffff;
+}
+#main .form button:active {
+  background: #a35af2;
+}
+#main .list-items {
+  margin: 4rem 0 0 0;
+}
+#main .list-items .item {
+  width: 100%;
+  background: #cba1f7;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+#main .list-items .item .header-item {
+  width: 60%;
+}
+#main .list-items .item .header-item a {
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Quicksand-SemiBold";
+  font-size: 17px;
+  padding: 0 0.5rem;
+}
+#main .list-items .item .header-item span {
+  width: 100%;
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 0 3px;
+  white-space: nowrap;
+  font-family: "Quicksand-Bold";
+}
+#main .list-items .item p {
+  font-family: "Quicksand";
+  font-size: 13px;
+  color: #ffffff;
+  margin: 0.6rem 0 0 0;
+}
